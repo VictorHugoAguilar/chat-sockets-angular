@@ -32,4 +32,14 @@ export class ChatService {
     return this.wsService.listen('mensaje-privado');
   }
 
+  // creamos un método para escuchar todos los usuarios activos
+  getUsuariosActivos() {
+    return this.wsService.listen('usuarios-activos');
+  }
+
+  // creamos un mñetodo para emitir los usuarios activos
+  emitirUsuariosActivos() {
+    return this.wsService.emit('obtener-usuarios');
+  }
+
 }
