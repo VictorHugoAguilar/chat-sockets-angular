@@ -3,9 +3,11 @@
 <hr>
 
 <div id="chat-mensajes">
-    <li class="list-group-item" *ngFor="let mensaje of mensajes">
+
+    <ul class="list-group-item" *ngFor="let mensaje of mensajes">
         {{mensaje.de}}: {{mensaje.cuerpo}}
-    </li>
+    </ul>
+
 </div>
 
 <form (ngSubmit)="enviar()">
